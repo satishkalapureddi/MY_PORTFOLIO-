@@ -371,24 +371,27 @@ Contact
 
 </h2>
 
-<form>
+<form id="contactForm">
 
 <input
 type="text"
-placeholder="Your Name">
+id="name"
+placeholder="Your Name"
+required>
 
 <input
 type="email"
-placeholder="Email">
+id="email"
+placeholder="Your Email"
+required>
 
 <textarea
-placeholder="Message">
-</textarea>
+id="message"
+placeholder="Your Message"
+required></textarea>
 
-<button>
-
-Send Message
-
+<button type="submit">
+Hire Me
 </button>
 
 </form>
@@ -418,6 +421,16 @@ Kalapureddi Satish
 <i class="fa-solid fa-arrow-up"></i>
 
 </button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "ew8lwdiiBsEC1Jd9p",
+});
+</script>
+
 
 <script src="script.js"></script>
 

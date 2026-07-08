@@ -483,3 +483,34 @@ console.log(
 // ======================
 // END
 // ======================
+
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    emailjs.send(
+        "service_v9zl39l",
+        "template_wdv8s0s",
+        {
+            from_name: document.getElementById("name").value,
+            from_email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+        }
+    ).then(() => {
+
+        alert("Message sent successfully!");
+
+        form.reset();
+
+    }).catch((error) => {
+
+        alert("Failed to send message.");
+
+        console.error(error);
+
+    });
+
+});
